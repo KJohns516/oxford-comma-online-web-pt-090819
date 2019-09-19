@@ -1,13 +1,12 @@
 describe "#oxford_comma" do
   it 'returns a string without any additional fomatting when given a 1-element array' do
-    expect(oxford_comma(["kiwi"])).to eq("kiwi")
-    [kiwi].join("")
-  end
+    expect(oxford_comma(["kiwi"])).to eq("kiwi").join
+    end
   it "adds 'and' between elements when given a 2-element array" do
-    expect(oxford_comma(["kiwi", "durian"])).to eq("kiwi and durian")
+    expect(oxford_comma(["kiwi", "durian"])).to eq("kiwi and durian").join
   end
   it "adds commas plus a final 'and' when given a 3-element array" do
-    expect(oxford_comma(["kiwi", "durian", "starfruit"])).to eq("kiwi, durian, and starfruit")
+    expect(oxford_comma(["kiwi", "durian", "starfruit"])).to eq("kiwi, durian, and starfruit").join
   end
   it "correctly formats arrays of lengths greater than three" do
     expect(oxford_comma(["kiwi", "durian", "starfruit", "mangos", "dragon fruits"])).to eq("kiwi, durian, starfruit, mangos, and dragon fruits")
